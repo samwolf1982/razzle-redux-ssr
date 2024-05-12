@@ -51,7 +51,6 @@ export const fetchBeers = (page = 1) => async (dispatch) => {
 // Client: These conditions will be met on first load of page
 export const fetchBeersIfNeeded = () => async (dispatch, getState) => {
   const beersState = getState().beers;
-  debugger
   const { beers, isLoading } = beersState;
   if (beers.length === 0 && !isLoading) {
     await dispatch(fetchBeers());

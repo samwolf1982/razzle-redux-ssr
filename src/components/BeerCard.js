@@ -13,24 +13,24 @@ const styles = {
 };
 
 const BeerCard = ({ classes, beer }) => {
-  debugger
+  // debugger
   return  <Card>
     <CardContent>
       <Grid container direction="row" spacing={4}>
         <Grid item xs={3}>
           <img
               className={classes.img}
-              src={beer.image_url}
-              title={beer.name}
-              alt={beer.name}
+              src={beer.avatar_url}
+              title={beer.login}
+              alt={beer.login}
           />
         </Grid>
         <Grid item xs={9}>
           <Typography gutterBottom variant="h5" component="h2">
-            {beer.name}
+            {beer.login}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {beer.description}
+            {beer.company}
           </Typography>
         </Grid>
       </Grid>
